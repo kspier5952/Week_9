@@ -28,5 +28,16 @@ public class Game21 {
         dealersum = (dealer1 + dealer2 + dealer3);
         System.out.println("The dealer has a " + dealer1 + ", " + dealer2 + ", and " + dealer3 + " for a total of " + dealersum + ".");
         input.close();
+        if (cardsum > 21){
+            System.out.println("Player loses");
+        }else if (dealersum > 21){
+            System.out.println("Player wins");
+        }else if (cardsum > dealersum){
+            System.out.println("Player wins");
+        }else if (cardsum < dealersum){
+            System.out.println("Dealer wins");
+        }else{
+            System.out.println("Tie");
+        }
     }
 }
